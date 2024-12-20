@@ -12,6 +12,8 @@ export async function login(prevState: unknown, formData: FormData) {
     schema: loginSchema,
   });
 
+  console.log(submission);
+
   if (submission.status !== "success") {
     // reply()の結果は useActionState の state に渡される
     return submission.reply();
