@@ -24,8 +24,19 @@ export const FormComponent:FC = () => {
         />
         {fields.password.errors && <p className="text-red-500" id={`${fields.password.id}-error`}>{fields.password.errors}</p>}
         </div>
+        <div className="flex flex-col gap-2">
+        <label htmlFor={fields.age.id}>Age</label>
+        <input
+           {...getInputProps(fields.age, { type: 'text' })}
+           pattern="\d+"
+           inputMode="numeric"
+           className="border border-gray-300 rounded-md p-2"
+        />
+        {fields.age.errors && <p className="text-red-500" id={`${fields.age.id}-error`}>{fields.age.errors}</p>}
+        </div>
         <button type="submit" disabled={isPending}>Login</button>
       </div>
+      
       </form>
   )
 };
