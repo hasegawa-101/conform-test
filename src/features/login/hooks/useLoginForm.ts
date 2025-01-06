@@ -1,5 +1,3 @@
-"use client";
-
 import { useForm } from '@conform-to/react';
 import { parseWithZod } from '@conform-to/zod';
 import { useActionState } from 'react';
